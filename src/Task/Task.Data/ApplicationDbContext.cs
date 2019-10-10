@@ -12,7 +12,7 @@ namespace Task.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("TaskDatabase", throwIfV1Schema: false)
         {
         }
 
