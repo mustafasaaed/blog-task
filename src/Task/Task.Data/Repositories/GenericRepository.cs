@@ -14,9 +14,9 @@ namespace Task.Data.Repositories
     public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
         private readonly DbSet<TEntity> _entities;
-        private readonly IApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public GenericRepository(IApplicationDbContext dbContext)
+        public GenericRepository(ApplicationDbContext dbContext)
         {
             _entities = dbContext.Set<TEntity>();
             _context = dbContext;
@@ -24,7 +24,8 @@ namespace Task.Data.Repositories
 
         public TEntity GetById(object id)
         {
-            return _entities.Where(e => e.IsDeleted == false).FirstOrDefault();
+            var entityId = Convert.ToInt32(id);
+            return _entities.Where(e => e.IsDeleted == false && e.Id == entityId).FirstOrDefault();
         }
 
         public IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null,
