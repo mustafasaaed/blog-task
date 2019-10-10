@@ -13,7 +13,7 @@
     </p>
 }
 
-<input id="filter" name="filter" value=""  class="form-control" placeholder="filter"/>
+<input id="filter" name="filter" value="" class="form-control" placeholder="filter" />
 <br />
 
 <table class="table" id="posts">
@@ -34,7 +34,9 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                <a href="@Url.Action("Details", "Posts", new { id = item.Id})">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)

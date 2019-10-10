@@ -14,10 +14,7 @@
             Category
         </dt>
         <dd>
-            @{ 
-                var categoryName = Model?.Category.Name;
-            }
-            @Html.DisplayFor(model => categoryName)
+            @Html.DisplayFor(model => Model.Category.Name)
         </dd>
 
         <dt>
