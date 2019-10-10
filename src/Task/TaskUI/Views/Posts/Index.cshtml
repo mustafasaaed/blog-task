@@ -12,7 +12,11 @@
         @Html.ActionLink("Create New", "Create")
     </p>
 }
-<table class="table">
+
+<input id="filter" name="filter" value=""  class="form-control" placeholder="filter"/>
+<br />
+
+<table class="table" id="posts">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -35,7 +39,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
+            <td class="categoryColumn">
                 @Html.DisplayFor(modelItem => item.Category.Name)
             </td>
             <td>
@@ -51,3 +55,7 @@
     }
 
 </table>
+
+@section Scripts {
+    <script src="~/Scripts/app/posts-table.js"></script>
+}
