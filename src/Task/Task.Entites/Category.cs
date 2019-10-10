@@ -12,8 +12,6 @@ namespace Task.Entites
         [Required]
         [StringLength(150, ErrorMessage = "Name :  Length should not exceed 150 characters")]
         public string Name { get; set; }
-        public string Description { get; set; }
-
         public virtual IList<Post> Posts { get; set; }
     }
 }

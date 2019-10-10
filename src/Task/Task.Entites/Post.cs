@@ -13,10 +13,6 @@ namespace Task.Entites
         [StringLength(500, ErrorMessage = "Title: Length should not exceed 500 characters")]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "ShortDescription: Field is required")]
-        [Display(Name = "Short Description")]
-        public string ShortDescription { get; set; }
-
         [Required(ErrorMessage = "Description: Field is required")]
         public string Description { get; set; }
         [Required(ErrorMessage = "Image Url Is Required")]
