@@ -120,6 +120,7 @@ namespace TaskUI.Controllers
             return RedirectToAction("Index");
         }
 
+        [AllowAnonymous]
         public ActionResult Details(int id)
         {
             var model = _postsService.GetAll(c => c.Id == id, null, "Category,Comments").FirstOrDefault();
