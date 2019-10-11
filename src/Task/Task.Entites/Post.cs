@@ -19,5 +19,7 @@ namespace Task.Entites
         [Display(Name = "Image Url")]
         public string ImageUrl { get; set; }
         public Category Category { get; set; }
+        public int CategoryId { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }

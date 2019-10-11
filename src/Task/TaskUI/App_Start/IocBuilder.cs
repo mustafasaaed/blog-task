@@ -38,11 +38,13 @@ namespace TaskUI.App_Start
             //Repositoeries
             builder.RegisterType<GenericRepository<Post>>().As<IRepository<Post>>();
             builder.RegisterType<GenericRepository<Category>>().As<IRepository<Category>>();
+            builder.RegisterType<GenericRepository<Comment>>().As<IRepository<Comment>>();
 
 
             //Services 
             builder.RegisterType<GenericService<Post>>().As<IGenericService<Post>>();
             builder.RegisterType<GenericService<Category>>().As<IGenericService<Category>>();
+            builder.RegisterType<GenericService<Comment>>().As<IGenericService<Comment>>();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
 
 

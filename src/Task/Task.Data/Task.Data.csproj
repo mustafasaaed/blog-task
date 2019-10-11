@@ -66,6 +66,10 @@
     <Compile Include="Migrations\201910101129424_AddPostAndCategory.Designer.cs">
       <DependentUpon>201910101129424_AddPostAndCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910102145469_AddedCommentEntity.cs" />
+    <Compile Include="Migrations\201910102145469_AddedCommentEntity.Designer.cs">
+      <DependentUpon>201910102145469_AddedCommentEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -91,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910101129424_AddPostAndCategory.resx">
       <DependentUpon>201910101129424_AddPostAndCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910102145469_AddedCommentEntity.resx">
+      <DependentUpon>201910102145469_AddedCommentEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

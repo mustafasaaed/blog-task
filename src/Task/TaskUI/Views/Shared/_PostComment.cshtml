@@ -1,0 +1,19 @@
+﻿@model TaskUI.Models.ViewModels.CommentViewModel
+
+
+<form>
+    @{
+        var postId = ViewBag.PostId;
+        Html.HiddenFor(m => postId);
+    }
+
+    <textarea name="Body" id="Body" class="form-control" placeholder="write a comment" rows="3" cols="10"></textarea>
+    <br />
+    <input  id="postId" value="@postId" hidden/>
+    <button type="submit" id="submit" class="btn btn-info pull-right">Post</button>
+    <br />
+    <br />
+    <hr />
+</form>
+
+

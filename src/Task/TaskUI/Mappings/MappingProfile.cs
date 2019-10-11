@@ -13,10 +13,12 @@ namespace TaskUI.Mappings
         {
             // Model => ViewModel
             CreateMap<Category, CategoryViewModel>();
+            CreateMap<Comment, CommentViewModel>();
             CreateMap<Post, PostViewModel>().ForMember(c => c.Photo, c => c.Ignore());
 
             // ViewModel => Model
-            CreateMap<Category, CategoryViewModel>();
+            CreateMap<CategoryViewModel, Category>();
+            CreateMap<CommentViewModel, Comment>();
             CreateMap<PostViewModel, Post>();
         }
     }

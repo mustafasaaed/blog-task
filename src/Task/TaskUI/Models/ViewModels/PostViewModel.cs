@@ -23,6 +23,8 @@ namespace TaskUI.Models.ViewModels
         public CategoryViewModel Category { get; set; }
         public int CategoryId { get; set; }
 
+        public List<CommentViewModel> Comments { get; set; }
+
 
     }
 }

@@ -1,0 +1,27 @@
+﻿@using TaskUI.Models.ViewModels
+@model TaskUI.Models.ViewModels.PostViewModel
+
+@{
+    ViewBag.PostId= @Model.Id;
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Comments Section
+    </div>
+    <div class="panel-body">
+        @Html.Partial("_PostComment", new CommentViewModel())
+        <ul class="media-list" id="comments-list">
+            @foreach (var item in Model.Comments)
+            {
+                <li class="media">
+                    <div class="media-body">
+                        <span class="text-muted pull-right"><small>@item.CreatedAt.ToShortDateString()</small></span>
+                        <p>@item.Body</p>
+                    </div>
+                </li>
+                <hr/>
+            }
+        </ul>
+    </div>
+</div>

@@ -122,7 +122,7 @@ namespace TaskUI.Controllers
 
         public ActionResult Details(int id)
         {
-            var model = _postsService.GetAll(c => c.Id == id, null, "Category").FirstOrDefault();
+            var model = _postsService.GetAll(c => c.Id == id, null, "Category,Comments").FirstOrDefault();
             if (model is null)
                 return View("_NotFound");
 
