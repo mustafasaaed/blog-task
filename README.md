@@ -13,3 +13,5 @@
 6- Make TaskUI your default project then Press F5 to run the project 
 
 7- Make sure that the default data that is in the seed method of DbInitializer has been committed to the DB
+
+8- Use amin user name : Admin@admin.com and password is : Abcd$$123
