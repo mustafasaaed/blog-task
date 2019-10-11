@@ -204,6 +204,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Photos\1dd69fa9-184c-4c32-ba78-563e95f0f638.png" />
     <Content Include="Scripts\app\comments.js" />
     <Content Include="Scripts\app\posts-table.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -267,7 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

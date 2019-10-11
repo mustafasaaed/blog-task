@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task.Data.Initialization;
 using Task.Data.Interfaces;
 using Task.Entites;
 
@@ -18,6 +19,7 @@ namespace Task.Data
         public ApplicationDbContext()
             : base("TaskDatabase", throwIfV1Schema: false)
         {
+            Database.SetInitializer<ApplicationDbContext>(new DbInitializer());
         }
 
         public static ApplicationDbContext Create()
